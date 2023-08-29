@@ -13,6 +13,6 @@
 
 --------------------------------------
 # to push your code on github
-git add . 
-git commit -m "some message"
-git push orgin main
+git add . ,
+git commit -m "some message",
+git push orgin main,
