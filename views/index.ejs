@@ -19,46 +19,86 @@
 
 </head>
 
-<body>
-  <h1>
-    <%= title %>
-  </h1>
-  <p>Welcome to <%= title %>
-  </p>
-  <h1>This is Demo project for Node js along with Expressjs</h1>
+<body style="background: cornsilk;">
 
-  <h1>Here is Table</h1>
+
+
+
+  
+
+
+
+  
   <div class="container">
-    <h2>Basic Table</h2>
-    <p>The .table class adds basic styling (light padding and only horizontal dividers) to a table:</p>
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Firstname</th>
-          <th>Lastname</th>
-          <th>Email</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Laxmi</td>
-          <td>Bhardwaj</td>
-          <td>john@example.com</td>
-        </tr>
-        <tr>
-          <td>Bhawish</td>
-          <td>Goel</td>
-          <td>mary@example.com</td>
-        </tr>
-        <tr>
-          <td>July</td>
-          <td>Dooley</td>
-          <td>july@example.com</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+      <h1>
+        Demo Application
+      </h1>
+      <p>Please Login Here
+      </p>
+    
 
+      <form>
+        <!-- Email input -->
+        <div class="form-outline mb-4">
+          <input type="email" id="form2Example1" class="form-control" />
+          <label class="form-label" for="form2Example1">Email address</label>
+        </div>
+        <br />
+        <!-- Password input -->
+        <div class="form-outline mb-4">
+          <input type="password" id="form2Example2" class="form-control" />
+          <label class="form-label" for="form2Example2">Password</label>
+        </div>
+
+        <!-- 2 column grid layout for inline styling -->
+        <div class="row mb-4">
+          <div class="col d-flex justify-content-center">
+            <!-- Checkbox -->
+            <div class="form-check">
+
+            </div>
+          </div>
+
+
+        </div>
+        <br/>
+        <div class="col">
+          <!-- Simple link -->
+          <a href="#!">Forgot password?</a>
+        </div>
+        <!-- Submit button -->
+        <button type="button" class="btn btn-primary btn-block mb-4">Sign in</button>
+
+        <!-- Register buttons -->
+        <div class="text-center">
+          <p>Not a member? <a href="#!">Register</a></p>
+        
+          <button type="button" class="btn btn-link btn-floating mx-1">
+            <i class="fab fa-facebook-f"></i>
+          </button>
+
+          <button type="button" class="btn btn-link btn-floating mx-1">
+            <i class="fab fa-google"></i>
+          </button>
+
+          <button type="button" class="btn btn-link btn-floating mx-1">
+            <i class="fab fa-twitter"></i>
+          </button>
+
+          <button type="button" class="btn btn-link btn-floating mx-1">
+            <i class="fab fa-github"></i>
+          </button>
+        </div>
+      </form>
+
+
+    </div>
+    <div class="col-md-4"></div>
+
+
+  </div>
 
 </body>
 
