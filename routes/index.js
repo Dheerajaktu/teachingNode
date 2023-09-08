@@ -2,10 +2,36 @@ var express = require('express');
 var router = express.Router();
 
 /* GET home page. */
-router.post('/', function(req, res, next) {
-  console.log("bhawish",req.body,req.params)
+router.get('/', function(req, res, next) {
+  console.log("bhawish GET",req.body,req.params)
   res.render('index', { title: 'Express' });
 });
+
+// for post data 
+router.post('/', function(req, res, next) {
+  console.log("bhawish POST",req.body);
+  const email = req.body.email; 
+  const pass = req.body.password;
+
+  console.log('--email--', email);
+  console.log('--pass--', pass);
+
+
+  // server logic for login
+
+  if(email != 'Test@123.com' || pass != '12345'){
+    return res.json({message : 'Error in Username or Password, Please try again..'});
+    // res.render('index', { title: 'Express' });
+  }else {
+    // return res.json({message : 'Login Success..'});
+    res.render('home', { title: 'Login Success' });
+  }
+
+
+  
+});
+
+
 
 
 
