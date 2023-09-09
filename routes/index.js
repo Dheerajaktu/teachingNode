@@ -3,13 +3,20 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  console.log("bhawish GET",req.body,req.params)
+  console.log("GET method called")
   res.render('index', { title: 'Express' });
 });
 
+// home page
+router.get('/home', function(req, res){
+  console.log("home route called");
+  res.render('home', {title : 'Home'});
+})
+
+
 // for post data 
 router.post('/', function(req, res, next) {
-  console.log("bhawish POST",req.body);
+  console.log("POST method called",req.body);
   const email = req.body.email; 
   const pass = req.body.password;
 
@@ -20,11 +27,12 @@ router.post('/', function(req, res, next) {
   // server logic for login
 
   if(email != 'Test@123.com' || pass != '12345'){
-    return res.json({message : 'Error in Username or Password, Please try again..'});
-    // res.render('index', { title: 'Express' });
+    // return res.json({message : 'Error in Username or Password, Please try again..'});
+    res.render('error', { title: 'Login Fail..' });
   }else {
     // return res.json({message : 'Login Success..'});
-    res.render('home', { title: 'Login Success' });
+    // res.render('home', { title: 'Login Success' });
+    res.redirect('/home');
   }
 
 
