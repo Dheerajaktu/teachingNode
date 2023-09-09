@@ -10,7 +10,7 @@ router.get('/', function(req, res, next) {
 // home page
 router.get('/home', function(req, res){
   console.log("home route called");
-  res.render('home', {title : 'Home'});
+  res.render('home1', {title : 'Home'});
 })
 
 
