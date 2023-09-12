@@ -54,4 +54,10 @@ router.get('/signup', function(req, res, next){
 //   res.render('index', { title: 'Sign up Form' })
 // })
 
+
+
+router.get('/home/shoes', function(req, res){
+  res.render('shoes', { title: 'Shoes' });
+})
+
 module.exports = router;
